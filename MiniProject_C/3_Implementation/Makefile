@@ -5,7 +5,7 @@ PROJECT_NAME = Snake
 BUILD = build
 
 # All source code files
-SRC = main.c\
+SRC = project_main.c\
 src/snake.c\
 src/global.c\
 
