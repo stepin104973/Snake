@@ -13,63 +13,79 @@ int scoreUpdate(void);
 //main program begins
 int main()
 {
-    int i, j, fileScoreRecieve;
-
+    int i, j, fileScoreRecieve, start;
     char play;
-
-    do
+	system("clear");
+    printf("\nCONTROLS\n");
+    printf("\n w + Enter - move up\n s + Enter - move down\n a + Enter - move left\n d + Enter - move right \n x + Enter - Quit");
+    printf("\n\n\nPress 1 followed by the Enter key to start playing ");
+    scanf(" %d", &start);
+    if(start == 1)
     {
-        Initial();
-        while(!endGame)
+          do
         {
-            Plot();
-            UserInput();
-            KeyResponse();
-            for(i = 0 ; i < 1000; i++)                           //delays the programming execution to make the snake move slower
+            Initial();
+            while(!endGame)
             {
-                for(j = 0; j < 20000; j++)
+                Plot();
+                UserInput();
+                KeyResponse();
+                for(i = 0 ; i < 1000; i++)                           //delays the programming execution to make the snake move slower
                 {
+                    for(j = 0; j < 20000; j++)
+                    {
 
+                    }
                 }
+
             }
 
-        }
+
+            //Updating the high score
+            fileScoreRecieve = scoreUpdate();
+
+            system("clear");
 
 
-        //Updating the high score
-        fileScoreRecieve = scoreUpdate();
+            if(score > fileScoreRecieve)
+            {
+               printf("Score : %d", score);
+               printf("\n\nThat's a new highscore!");
+            }
 
-        system("clear");
-        
+            else
+            {
+                printf("Your Score : %d", score);
+                printf("\n\nCurrent high-score : %d", fileScoreRecieve);
+            }
 
-        if(score > fileScoreRecieve)
-        {
-           printf("Score : %d", score);
-           printf("\n\nThat's a new highscore!");
-        }
-
-        else
-        {
-            printf("Your Score : %d", score);
-            printf("\n\nCurrent highscore : %d", fileScoreRecieve);
-        }
-
-        printf("\n\nControls");
-        printf("\nw - move up\ns - move down\na - move left\nd - move right \nx - Quit");
-        printf("\n\n\nDo you want to play again? (Press y followed by Enter key) ");
-        scanf(" %c", &play);                                    //scanf ignores whitespace
+            printf("\n\nControls");
+            printf("\n w + Enter - move up\n s + Enter - move down\n a + Enter - move left\n d + Enter - move right \n x + Enter - Quit");
+            printf("\n\n\nDo you want to play again? (Press y followed by Enter key) ");
+            scanf(" %c", &play);                                    //scanf ignores whitespace
 
 
 
-    } while(play == 'y');
-    system("clear");
-    
+        } while(play == 'y');
+
+		system("clear");
+		printf("\nExiting...\n");
+		system("clear");
+		exit(0);
+	}
+
+    else
+    {
+    	system("clear");
+    	printf("\nExiting...");
+    	exit(0);
+	}
+
     return(0);
 }
 
-
 /*Initializing all the variables*/
-void Initial()                                                 
+void Initial()
 {
     endGame = 0;
     SnakeX = Nc/2;
