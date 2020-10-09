@@ -1,5 +1,6 @@
 # MiniProject on "Snake Game"
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/642ae645e7674f85ba82df6bb1ed1cd6)](https://app.codacy.com/gh/stepin104973/Mini-Project-Snake-Game?utm_source=github.com&utm_medium=referral&utm_content=stepin104973/Mini-Project-Snake-Game&utm_campaign=Badge_Grade_Settings)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/97382a72e311446a8d39b59c3c9c38f9)](https://www.codacy.com/gh/stepin104973/Snake-Game/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=stepin104973/Snake-Game&amp;utm_campaign=Badge_Grade)
 
 
