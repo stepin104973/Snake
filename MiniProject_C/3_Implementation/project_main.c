@@ -1,3 +1,4 @@
+/* Header files */
 #include<stdio.h>
 #include<stdlib.h>
 //#include<conio.h>
@@ -5,17 +6,21 @@
 #include<global.h>
 #include<snake.h>
 
-//function declaration
+/* function declarations */
+
+/* Initializes all the variables */
 void Initial(void);
 
+/* updates all the variables */
 int scoreUpdate(void);
 
-//main program begins
+/* start of the application */
 int main()
 {
     int i, j, fileScoreRecieve, start;
     char play;
 	system("clear");
+    /* Printing keyboard controls to the screen */
     printf("\nCONTROLS\n");
     printf("\n w + Enter - move up\n s + Enter - move down\n a + Enter - move left\n d + Enter - move right \n x + Enter - Quit");
     printf("\n\n\nPress 1 followed by the Enter key to start playing ");
@@ -40,8 +45,7 @@ int main()
 
             }
 
-
-            //Updating the high score
+            /* Updating the high-score */
             fileScoreRecieve = scoreUpdate();
 
             system("clear");
@@ -105,7 +109,7 @@ void Initial()
     score = 0;
 }
 
-
+/* Reading and writing the score */
 int scoreUpdate()
 {
     int fileScore;

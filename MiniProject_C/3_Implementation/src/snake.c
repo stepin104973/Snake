@@ -1,3 +1,4 @@
+/* header files */
 #include<snake.h>
 #include<global.h>
 #include<stdio.h>
@@ -5,10 +6,13 @@
 //#include<conio.h>
 #include<string.h>
 
-int Plot()                                                    //THis function outputs the snake, fruit and the bounding box to the screen
-{                                                              //,according to their coordinates.
+/* This function outputs the snake, fruit and the bounding box to the screen
+ according to their coordinates. */
+
+int Plot()                                                    
+{                                                              
     int i, j, k, flag;
-    system("clear");                                            //clears the screen whenever  points are plotted
+    system("clear");                                           
     for(i = 0; i < Nr ; i++)
     {
         for(j = 0; j < Nc; j++)
@@ -63,6 +67,7 @@ int Plot()                                                    //THis function ou
 
 }
 
+/* This function tracks the user's inputs */
 int UserInput()
 {
    // if(kbhit())
@@ -85,6 +90,7 @@ int UserInput()
     return(1);
 }
 
+/* This function changes the coordinates of the objects, according to the user's inputs */
 int KeyResponse()
 {
     int prevX = tailX[0];
